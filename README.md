@@ -23,11 +23,19 @@ Hexo主题来源于[litten/hexo-theme-yilia](https://github.com/litten/hexo-them
 ```bash
     $ hexo i blogDir  //init，blogDir是文件夹名称
 ```
-4. 把本项目直接下载下来，替换到blogDir中；
+4. 把本项目直接下载下来，替换到blogDir中，分别修改根目录下与[theme/yilia](https://github.com/horacework/HexoBlogBackup/tree/master/themes/yilia)目录下的_config.yml；
 
-5. 注意公共或主题所需资源一律放入 **public/assets/** 中，示例：[horacework.github.io/assets/](https://github.com/horacework/horacework.github.io/tree/master/assets)
+5. 安装相关插件，在blogDir目录下
+```bash
+    $ npm i hexo-generator-json-content --save
+    $ npm i hexo-asset-image --save
+    $ npm i gitment --save
+```
+其中Gitment是我认为最合适的文章评论插件，相关安装配置自行百度。
 
-6. 常用操作
+6. 注意公共或主题所需资源一律放入 **public/assets/** 中，示例：[horacework.github.io/assets/](https://github.com/horacework/horacework.github.io/tree/master/assets)
+
+7. 常用操作
 ```bash
     $ hexo g    //generetor，写完markdown文章后，使用该命令更新静态文件
     $ hexo d    //deploy，一键部署到githubIO，这需要修改_config.yml文件中deploy属性
